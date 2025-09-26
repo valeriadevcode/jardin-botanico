@@ -71,10 +71,13 @@ p { margin-top: 0; }
 
 .memory-card .back {
   transform: rotateY(180deg);
-  background-size: cover;
+  background-size: contain;  /* antes era cover */
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 10px;
+  backface-visibility: hidden;
 }
+
 
 /* modal de victoria */
 .modal {
