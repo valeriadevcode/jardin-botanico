@@ -1,37 +1,35 @@
+/* =========================================================
+   CSS Jardín Botánico - Desktop y Móvil
+========================================================= */
+
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   background: url('../img/flora.png') no-repeat center center/cover;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  border-radius: 10px;
+/* Título principal */
+.titulo {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(90deg, #4caf50, #81c784, #a5d6a7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  animation: brillar 3s infinite alternate;
 }
 
-.menu {
-  margin-top: 30px;
+@keyframes brillar {
+  0% { text-shadow: 2px 2px 8px #66bb6a; }
+  100% { text-shadow: 2px 2px 20px #c8e6c9; }
 }
 
-button {
-  margin: 10px;
-  padding: 15px 30px;
-  font-size: 18px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  background: rgba(0, 128, 0, 0.8);
-  color: white;
-  transition: transform 0.2s;
-}
-
-button:hover {
-  transform: scale(1.1);
-  background: #4CAF50;
-}
-
+/* Contenedor expositor */
 .expositor {
   margin: 20px auto;
   padding: 15px 25px;
@@ -63,25 +61,31 @@ button:hover {
   margin: 0;
 }
 
-.titulo {
-  font-size: 40px;
-  text-align: center;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background: linear-gradient(90deg, #4caf50, #81c784, #a5d6a7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
-  animation: brillar 3s infinite alternate;
+/* Menú de botones */
+.menu {
+  margin-top: 30px;
 }
 
-@keyframes brillar {
-  0% { text-shadow: 2px 2px 8px #66bb6a; }
-  100% { text-shadow: 2px 2px 20px #c8e6c9; }
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: rgba(0, 128, 0, 0.8);
+  color: white;
+  transition: transform 0.2s;
 }
 
+button:hover {
+  transform: scale(1.1);
+  background: #4CAF50;
+}
+
+/* Botón de video destacado */
 .video-btn {
-  background-color: #66bb6a; /* Naranja fuerte */
+  background-color: #66bb6a;
   color: white;
   font-size: 1.2em;
   font-weight: bold;
@@ -97,4 +101,47 @@ button:hover {
 .video-btn:hover {
   background-color: #e64a19;
   transform: scale(1.1);
+}
+
+/* =========================================================
+   Media Queries - Pantallas Pequeñas / Móvil
+========================================================= */
+@media (max-width: 600px) {
+
+  /* Título más pequeño */
+  .titulo {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  /* Contenedor expositor más ancho */
+  .expositor {
+    width: 90%;
+    padding: 10px 15px;
+  }
+
+  .expositor h2 {
+    font-size: 18px;
+  }
+
+  .expositor .nombre {
+    font-size: 22px;
+  }
+
+  .expositor .curso {
+    font-size: 16px;
+  }
+
+  /* Botones más grandes y verticales */
+  button, .video-btn {
+    font-size: 1.5em;
+    padding: 12px 20px;
+    margin: 10px auto;
+    width: 90%;
+    display: block;
+  }
+
+  .menu {
+    margin-top: 20px;
+  }
 }
