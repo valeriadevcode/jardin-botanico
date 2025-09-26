@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Jardín Botánico SCZ</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <h1 class="titulo">🌿 Bienvenidos al Jardín Botánico 🌿</h1>  
+    <div class="expositor">
+      <h2>👦🏻 Expositor:</h2>
+      <p class="nombre">🌿 Mateo Coronado 🌿</p>
+      <p class="curso">📚 5to de Primaria</p>
+    </div>
+  <p>Elige una actividad:</p>
+
+  <div class="menu">
+    <!-- Botón de video primero -->
+    <button class="video-btn" onclick="location.href='video.html'">🎬 Ver Video</button>
+
+    <!-- Resto de botones -->
+    <button onclick="irA('explora')">Explora el Jardín</button>
+    <button onclick="irA('quiz')">Juego de Preguntas</button>
+    <button onclick="irA('memoria')">Juego de Memoria</button>
+    <button onclick="irA('rompecabezas')">Rompecabezas</button>
+    <button onclick="irA('lineaTiempo')">Línea del Tiempo</button>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

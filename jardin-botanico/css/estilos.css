@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url('../img/flora.png') no-repeat center center/cover;
+  color: white;
+}
+
+h1 {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.menu {
+  margin-top: 30px;
+}
+
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: rgba(0, 128, 0, 0.8);
+  color: white;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #4CAF50;
+}
+
+.expositor {
+  margin: 20px auto;
+  padding: 15px 25px;
+  width: fit-content;
+  text-align: center;
+  background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+  border: 3px solid #4caf50;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.expositor h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #2e7d32;
+}
+
+.expositor .nombre {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1b5e20;
+  margin: 5px 0;
+}
+
+.expositor .curso {
+  font-size: 18px;
+  color: #33691e;
+  margin: 0;
+}
+
+.titulo {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(90deg, #4caf50, #81c784, #a5d6a7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  animation: brillar 3s infinite alternate;
+}
+
+@keyframes brillar {
+  0% { text-shadow: 2px 2px 8px #66bb6a; }
+  100% { text-shadow: 2px 2px 20px #c8e6c9; }
+}
+
+.video-btn {
+  background-color: #66bb6a; /* Naranja fuerte */
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.video-btn:hover {
+  background-color: #e64a19;
+  transform: scale(1.1);
+}

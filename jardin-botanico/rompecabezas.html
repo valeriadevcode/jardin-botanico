@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Rompecabezas - Jardín Botánico</title>
+  <link rel="stylesheet" href="css/rompecabezas.css">
+</head>
+<body>
+  <h1>🧩 Rompecabezas - Jardín Botánico</h1>
+  <p>Arrastra las piezas para armar la imagen.</p>
+
+  <div class="controls">
+    <button id="shuffleBtn">🔀 Mezclar</button>
+    <button id="resetBtn">🔁 Reiniciar</button>
+    <button onclick="window.location.href='index.html'">⬅ Volver al Menú</button>
+  </div>
+
+  <div id="puzzle" class="puzzle" data-size="3"></div>
+
+  <!-- Modal de victoria -->
+  <div id="winModal" class="modal">
+    <div class="modal-content">
+      <h2>🎉 ¡Muy bien!</h2>
+      <p>Has completado el rompecabezas.</p>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="js/rompecabezas.js"></script>
+</body>
+</html>

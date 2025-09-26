@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de Memoria - Jardín Botánico</title>
+  <link rel="stylesheet" href="css/memoria.css">
+</head>
+<body>
+  <h1>🎴 Juego de Memoria - Jardín Botánico</h1>
+  <p>Haz clic en dos cartas y encuentra las parejas.</p>
+
+  <div class="controls">
+    <button id="resetBtn">🔁 Reiniciar</button>
+    <button onclick="window.location.href='index.html'">⬅ Volver al Menú</button>
+  </div>
+
+  <div class="memory-game"></div>
+
+  <!-- Modal de victoria -->
+  <div id="winModal" class="modal">
+    <div class="modal-content">
+      <h2>🎉 ¡Muy bien!</h2>
+      <p>Has encontrado todas las parejas.</p>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="js/memoria.js"></script>
+</body>
+</html>

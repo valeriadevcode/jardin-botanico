@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Explora el Jardín - Jardín Botánico</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/explora.css">
+</head>
+<body>
+  <h1>🌿 Explora el Jardín Botánico 🌿</h1>
+
+  <div class="mapa-container">
+    <img src="img/images.jpg" alt="Mapa del Jardín Botánico" class="mapa">
+
+    <!-- Puntos interactivos -->
+   <!-- Puntos interactivos -->
+<div class="punto" style="top: 15%; left: 30%;" onclick="mostrarInfo('Mirador Laguna', 'Aquí puedes disfrutar de una vista panorámica de la laguna.')"></div>
+<div class="punto" style="top: 50%; left: 45%;" onclick="mostrarInfo('Cactario Natural', 'En esta área puedes observar diversas especies de cactus.')"></div>
+<div class="punto" style="top: 75%; left: 40%;" onclick="mostrarInfo('Bosque Chiquitano', 'Senderos educativos dentro del bosque chiquitano para recorrer en familia.')"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarInfo()">❌</span>
+      <h2 id="infoTitulo"></h2>
+      <p id="infoTexto"></p>
+    </div>
+  </div>
+
+  <button onclick="window.location.href='index.html'">⬅ Volver al Menú</button>
+
+  <script src="js/explora.js"></script>
+</body>
+</html>

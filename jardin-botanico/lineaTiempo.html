@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Línea del Tiempo - Jardín Botánico</title>
+  <link rel="stylesheet" href="css/lineaTiempo.css">
+</head>
+<body>
+  <h1>🌱 Línea del Tiempo del Jardín Botánico 🌱</h1>
+  
+  <div class="timeline">
+    <div class="event" onclick="mostrarDetalle('1983', 'El Jardín Botánico se trasladó de la ribera del río Piraí a la carretera a Cotoca, km 8.5, debido a inundaciones.')">
+      <span>1983</span>
+    </div>
+    <div class="event" onclick="mostrarDetalle('1985', 'El Jardín Botánico fue creado oficialmente por el profesor boliviano Noel Kempff Mercado para conservar plantas de los ecosistemas acuáticos de Bolivia.')">
+      <span>1985</span>
+    </div>
+    <div class="event" onclick="mostrarDetalle('Actualidad', 'Hoy el Jardín Botánico es un museo de plantas vivas con más de 10.000 ejemplares, un espacio de educación ambiental, recreación y conservación de flora y fauna.')">
+      <span>Actualidad</span>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="detalleModal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarDetalle()">❌</span>
+      <h2 id="modalFecha"></h2>
+      <p id="modalTexto"></p>
+    </div>
+  </div>
+
+  <button onclick="window.location.href='index.html'">⬅ Volver al Menú</button>
+
+  <script src="js/lineaTiempo.js"></script>
+</body>
+</html>
