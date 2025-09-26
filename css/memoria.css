@@ -1,3 +1,6 @@
+/* ===============================================
+   Estilos generales
+================================================= */
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   background: linear-gradient(#e9fbe9, #d0f7d0);
@@ -27,7 +30,9 @@ p { margin-top: 0; }
 
 .controls button:hover { background: #388e3c; }
 
-/* Tablero de cartas */
+/* ===============================================
+   Tablero de cartas
+================================================= */
 .memory-game {
   width: 480px;
   max-width: 100%;
@@ -38,7 +43,9 @@ p { margin-top: 0; }
   perspective: 1000px;
 }
 
-/* Carta */
+/* ===============================================
+   Carta
+================================================= */
 .memory-card {
   width: 100%;
   padding-top: 100%; /* mantiene proporción cuadrada */
@@ -46,15 +53,17 @@ p { margin-top: 0; }
   transform-style: preserve-3d;
   transition: transform 0.6s;
   cursor: pointer;
-  border-radius: 12px; /* suaviza los bordes */
-  overflow: hidden;    /* asegura que la imagen no se salga */
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .memory-card.flip {
   transform: rotateY(180deg);
 }
 
-/* Cara frontal y trasera */
+/* ===============================================
+   Cara frontal y trasera
+================================================= */
 .memory-card .front,
 .memory-card .back {
   position: absolute;
@@ -76,11 +85,16 @@ p { margin-top: 0; }
 
 .memory-card .back {
   transform: rotateY(180deg);
-  background-size: cover;
+  background-size: contain;       /* Ajusta la imagen para que quepa */
   background-position: center;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;    /* fundamental para que se vea al girar */
+  background-color: #ffffff;      /* color de respaldo */
 }
 
-/* Modal de victoria */
+/* ===============================================
+   Modal de victoria
+================================================= */
 .modal {
   display: none;
   position: fixed;
@@ -110,9 +124,9 @@ p { margin-top: 0; }
   cursor: pointer;
 }
 
-/* =========================================================
+/* ===============================================
    Media Queries - Pantallas Pequeñas / Móvil
-========================================================= */
+================================================= */
 @media (max-width: 600px) {
 
   .controls button {
@@ -125,7 +139,7 @@ p { margin-top: 0; }
 
   .memory-game {
     width: 95%;
-    grid-template-columns: repeat(3, 1fr); /* menos columnas para que no queden muy pequeñas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: 20px auto;
   }
