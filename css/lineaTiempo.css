@@ -1,22 +1,33 @@
+/* =========================================================
+   Estilos generales
+========================================================= */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   background: #f4f9f4;
+  margin: 0;
+  padding: 0 10px;
 }
 
+/* =========================================================
+   Línea del tiempo
+========================================================= */
 .timeline {
   position: relative;
   margin: 50px auto;
   padding: 20px 0;
   width: 90%;
+  max-width: 900px;          /* ancho máximo */
   border-top: 3px solid green;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* mejor que space-around */
+  align-items: center;       /* centra verticalmente los eventos */
 }
 
 .event {
   position: relative;
   cursor: pointer;
+  text-align: center;        /* centra el número dentro del círculo */
 }
 
 .event span {
@@ -34,7 +45,9 @@ body {
   background: darkgreen;
 }
 
-/* Modal */
+/* =========================================================
+   Modal
+========================================================= */
 .modal {
   display: none;
   position: fixed;
@@ -42,6 +55,8 @@ body {
   left: 0; top: 0;
   width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
@@ -54,6 +69,7 @@ body {
   text-align: left;
   position: relative;
   animation: aparecer 0.4s;
+  color: #333;
 }
 
 @keyframes aparecer {
@@ -73,12 +89,20 @@ body {
 ========================================================= */
 @media (max-width: 600px) {
 
+  h1 {
+    font-size: 24px;
+    margin: 15px 0;
+    text-align: center;
+    color: #174d16;
+  }
+
   .timeline {
-    flex-direction: column; /* Línea de tiempo vertical */
-    align-items: center;
-    border-top: none;       /* Quitamos la línea horizontal */
-    border-left: 3px solid green; /* Línea vertical */
+    flex-direction: column;      /* línea de tiempo vertical */
+    align-items: flex-start;     /* alineado a la izquierda */
+    border-top: none;            /* quitamos la línea horizontal */
+    border-left: 3px solid green;/* línea vertical */
     padding: 20px 0 20px 20px;
+    width: 90%;
   }
 
   .event {
@@ -90,7 +114,6 @@ body {
     font-size: 1.2em;
   }
 
-  /* Modal más ancho y centrado mejor en móvil */
   .modal-content {
     width: 90%;
     margin: 25% auto;
@@ -101,5 +124,24 @@ body {
     font-size: 24px;
     top: 5px;
     right: 10px;
+  }
+
+  button {
+    width: 90%;
+    padding: 12px 0;
+    font-size: 1.2em;
+    margin: 10px auto;
+    display: block;
+    border-radius: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    background-color: #66bb6a;
   }
 }
