@@ -84,3 +84,44 @@ p { margin-top: 0; }
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* =========================================================
+   Media Queries - Pantallas Pequeñas / Móvil
+========================================================= */
+@media (max-width: 600px) {
+
+  .controls button {
+    width: 90%;
+    font-size: 1em;
+    padding: 12px 0;
+    margin: 6px auto;
+    display: block;
+  }
+
+  .puzzle {
+    width: 95%;
+    height: auto; /* altura automática para mantener proporción */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 20px;
+  }
+
+  .tile {
+    height: 0;
+    padding-top: 33%; /* mantiene proporción cuadrada (100/3) */
+    background-size: cover;
+  }
+
+  .modal .modal-content {
+    width: 90%;
+    padding: 15px 20px;
+  }
+
+  .modal button {
+    width: 90%;
+    padding: 10px 0;
+    font-size: 1em;
+  }
+}

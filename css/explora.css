@@ -73,3 +73,64 @@
   animation: aparecer 0.4s;
   color: #333; /* <-- color de texto visible */
 }
+
+/* =========================================================
+   Media Queries - Pantallas Pequeñas / Móvil
+========================================================= */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 24px;
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .mapa-container {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .mapa {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Puntos interactivos más grandes y fáciles de tocar */
+  .punto {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+
+  /* Modal más ancho y centrado mejor en móvil */
+  .modal-content {
+    width: 90%;
+    margin: 25% auto;
+    padding: 15px;
+  }
+
+  .cerrar {
+    font-size: 24px;
+    top: 5px;
+    right: 10px;
+  }
+
+  button {
+    width: 90%;
+    padding: 12px 0;
+    font-size: 1.2em;
+    margin: 10px auto;
+    display: block;
+    border-radius: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    background-color: #66bb6a;
+  }
+}

@@ -67,3 +67,39 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
+
+/* =========================================================
+   Media Queries - Pantallas Pequeñas / Móvil
+========================================================= */
+@media (max-width: 600px) {
+
+  .timeline {
+    flex-direction: column; /* Línea de tiempo vertical */
+    align-items: center;
+    border-top: none;       /* Quitamos la línea horizontal */
+    border-left: 3px solid green; /* Línea vertical */
+    padding: 20px 0 20px 20px;
+  }
+
+  .event {
+    margin: 20px 0;
+  }
+
+  .event span {
+    padding: 15px 20px;
+    font-size: 1.2em;
+  }
+
+  /* Modal más ancho y centrado mejor en móvil */
+  .modal-content {
+    width: 90%;
+    margin: 25% auto;
+    padding: 15px;
+  }
+
+  .cerrar {
+    font-size: 24px;
+    top: 5px;
+    right: 10px;
+  }
+}

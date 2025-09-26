@@ -25,3 +25,23 @@
 #opciones button:hover {
   background: darkgreen;
 }
+
+/* =========================================================
+   Media Queries - Pantallas Pequeñas / Móvil
+========================================================= */
+@media (max-width: 600px) {
+
+  #quiz-container {
+    width: 95%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  #opciones button {
+    width: 95%;
+    padding: 12px;
+    font-size: 1.1em;
+    margin: 8px auto;
+  }
+}
+
