@@ -96,15 +96,15 @@ p { margin-top: 0; }
 
   .puzzle {
     width: 95%;
-    max-width: 360px; /* opcional, para no hacerla gigante */
-    gap: 4px;
+    max-width: 360px; /* mantiene proporción para no deformar */
     margin-bottom: 20px;
+    gap: 4px;
   }
 
   .tile {
     width: 100%;
-    aspect-ratio: 1 / 1; /* mantiene cuadrado sin padding hacks */
-    background-size: calc(100% * 3) calc(100% * 3); /* ajusta al tamaño de la celda */
+    height: auto; /* que se escale proporcionalmente */
+    /* NO TOQUES background-size ni background-position */
   }
 
   .modal .modal-content {
