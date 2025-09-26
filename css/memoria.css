@@ -1,6 +1,3 @@
-/* ===============================================
-   Estilos generales
-================================================= */
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   background: linear-gradient(#e9fbe9, #d0f7d0);
@@ -27,15 +24,11 @@ p { margin-top: 0; }
   cursor: pointer;
   font-size: 14px;
 }
-
 .controls button:hover { background: #388e3c; }
 
-/* ===============================================
-   Tablero de cartas
-================================================= */
+/* tablero de cartas */
 .memory-game {
   width: 480px;
-  max-width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -43,34 +36,27 @@ p { margin-top: 0; }
   perspective: 1000px;
 }
 
-/* ===============================================
-   Carta
-================================================= */
+/* carta */
 .memory-card {
-  width: 100%;
-  padding-top: 100%; /* mantiene proporción cuadrada */
+  width: 100px;
+  height: 100px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
   cursor: pointer;
-  border-radius: 12px;
-  overflow: hidden;
 }
 
 .memory-card.flip {
   transform: rotateY(180deg);
 }
 
-/* ===============================================
-   Cara frontal y trasera
-================================================= */
+/* cara frontal y trasera */
 .memory-card .front,
 .memory-card .back {
   position: absolute;
-  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
   backface-visibility: hidden;
 }
 
@@ -85,16 +71,12 @@ p { margin-top: 0; }
 
 .memory-card .back {
   transform: rotateY(180deg);
-  background-size: contain;       /* Ajusta la imagen para que quepa */
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  backface-visibility: hidden;    /* fundamental para que se vea al girar */
-  background-color: #ffffff;      /* color de respaldo */
+  border-radius: 10px;
 }
 
-/* ===============================================
-   Modal de victoria
-================================================= */
+/* modal de victoria */
 .modal {
   display: none;
   position: fixed;
@@ -105,7 +87,6 @@ p { margin-top: 0; }
   justify-content: center;
   align-items: center;
 }
-
 .modal .modal-content {
   background: white;
   padding: 20px 30px;
@@ -113,7 +94,6 @@ p { margin-top: 0; }
   text-align: center;
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
-
 .modal button {
   margin-top: 12px;
   background: #4caf50;
@@ -124,9 +104,9 @@ p { margin-top: 0; }
   cursor: pointer;
 }
 
-/* ===============================================
+/* =========================================================
    Media Queries - Pantallas Pequeñas / Móvil
-================================================= */
+========================================================= */
 @media (max-width: 600px) {
 
   .controls button {
@@ -139,17 +119,23 @@ p { margin-top: 0; }
 
   .memory-game {
     width: 95%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* menos columnas para que no queden muy pequeñas */
     gap: 10px;
     margin: 20px auto;
   }
 
   .memory-card {
+    width: 100%;
     padding-top: 100%; /* mantiene proporción cuadrada */
+    position: relative;
   }
 
   .memory-card .front,
   .memory-card .back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
     font-size: 20px;
   }
 
